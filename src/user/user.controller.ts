@@ -21,4 +21,10 @@ export class UserController {
     public async ceateUser(@Body() createUserDto: CreateUserDto): Promise<User> {
         return this.userService.createUser(createUserDto);
     }
+
+/*     @Post()
+    @ApiOperation({ summary: 'Used for login process'})
+    public async loginUser(){
+        
+    } */
 }

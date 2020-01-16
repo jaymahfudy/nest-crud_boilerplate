@@ -6,9 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
   const options = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Ezlearn')
     .setDescription('Ezlearn api documentation')
-    .addTag('ezlearn')
+    // .addTag('ezlearn')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
